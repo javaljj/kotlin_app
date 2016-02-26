@@ -13,6 +13,7 @@ import com.javalj.kotlinapp.R
 import com.javalj.kotlinapp.ui.setting.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import org.jetbrains.anko.find
 import org.jetbrains.anko.onClick
 import org.jetbrains.anko.toast
 
@@ -23,16 +24,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initViews()
 
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
+        // val toolbar = findViewById(R.id.toolbar) as Toolbar
+        val toolbar = find<Toolbar>(R.id.toolbar);
         setSupportActionBar(toolbar)
-
-        val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
+        // val fab = findViewById(R.id.fab) as FloatingActionButton
+        val fab = find<FloatingActionButton>(R.id.fab)
+        fab.setOnClickListener {
+            view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+        }
     }
 
     private fun initViews() {
         button.onClick {
-            startActivity(Intent(this, LoginActivity::class.java));
+            startActivity(Intent(this, ListViewActivity::class.java));
         }
     }
 

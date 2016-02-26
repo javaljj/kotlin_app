@@ -23,6 +23,10 @@
             android:name=".ui.setting.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.No" />
+        <activity
+            android:name=".ui.main.ListViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.No" />
     </application>
 
 </manifest>
