@@ -35,9 +35,9 @@ public class BaseListAdapter<E>(val list: MutableList<E>, val context: Context) 
             view = LayoutInflater.from(mContext).inflate(R.layout.xxx, null)
             viewHolder = ViewHolder(view)
             viewHolder.text = view.find<TextView>(R.id.text)
-            view.tag = viewHolder
+            view!!.tag = viewHolder
         } else {
-            viewHolder = view!!.tag as ViewHolder
+            viewHolder = view.tag as ViewHolder
         }
         var item = getItem(p0)
         viewHolder.text?.text = item.toString()
