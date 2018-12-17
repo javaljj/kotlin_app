@@ -3,7 +3,7 @@
 this app is just for fun
 
 # ListView
-
+''' python
 jiangj=[1000000,132076,5332,200,10,5]
 
 def printDajiang(num):
@@ -76,3 +76,4 @@ for x in range(6):
     # print(total(x,0))
     with open(path, "w+") as f:
         f.write(str(arr[x]))
+        '''
