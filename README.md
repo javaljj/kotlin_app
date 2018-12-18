@@ -43,16 +43,7 @@ for item in all:
     
     
     
-    flow
-st=>start: Start:>https://www.zybuluo.com
-io=>inputoutput: verification
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-sub=>subroutine: Your Subroutine
-e=>end
-st->io->op->cond
-cond(yes)->e
-cond(no)->sub->io
+
 
     for tb in range(len(item)):
 
@@ -92,3 +83,17 @@ for x in range(6):
     with open(path, "w+") as f:
         f.write(str(arr[x]))
         '''
+        
+        
+        
+        
+            flow
+st=>start: Start:>https://www.zybuluo.com
+io=>inputoutput: verification
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+sub=>subroutine: Your Subroutine
+e=>end
+st->io->op->cond
+cond(yes)->e
+cond(no)->sub->io
