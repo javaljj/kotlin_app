@@ -38,6 +38,21 @@ arr = [[] for x in range(6)]
 for item in all:
     rnum = 0
     bnum = 0
+    
+    
+    
+    
+    
+    flow
+st=>start: Start:>https://www.zybuluo.com
+io=>inputoutput: verification
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+sub=>subroutine: Your Subroutine
+e=>end
+st->io->op->cond
+cond(yes)->e
+cond(no)->sub->io
 
     for tb in range(len(item)):
 
